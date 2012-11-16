@@ -1,19 +1,19 @@
 #navbox{
   display:block;
-  width:100px;
-  height:100px;
+  width:200px;
+  height:200px;
   background:rgba(0,0,0,.8);
   border-radius:10px;
   color:#fff;
-  font:70px/100px monospace;
+  font:140px/200px monospace;
   font-weight:900;
   text-align:center;
   text-decoration:none;
   position:absolute;
   top:50%;
-  margin-top:-50px;
+  margin-top:-100px;
   left:50%;
-  margin-left:-50px;
+  margin-left:-100px;
   display:none;
 }
 .fadefromleft{
@@ -53,22 +53,22 @@
   -o-animation:fadefromright 500ms ease-in-out 1;
 }
 @keyframes fadefromright{
-  0%   {left: 100%;opacity:0;margin-left:-100px;}
-  100% {left: 50%;opacity:1;margin-left:-50px;}
+  0%   {left: 100%;opacity:0;margin-left:-200px;}
+  100% {left: 50%;opacity:1;margin-left:-100px;}
 }
 @-webkit-keyframes fadefromright{
-  0%   {left: 100%;opacity:0;margin-left:-100px;}
-  100% {left: 50%;opacity:1;margin-left:-50px;}
+  0%   {left: 100%;opacity:0;margin-left:-200px;}
+  100% {left: 50%;opacity:1;margin-left:-100px;}
 }
 @-moz-keyframes fadefromright{
-  0%   {left: 100%;opacity:0;margin-left:-100px;}
-  100% {left: 50%;opacity:1;margin-left:-50px;}
+  0%   {left: 100%;opacity:0;margin-left:-200px;}
+  100% {left: 50%;opacity:1;margin-left:-100px;}
 }
 @-ms-keyframes fadefromright{
-  0%   {left: 100%;opacity:0;margin-left:-100px;}
-  100% {left: 50%;opacity:1;margin-left:-50px;}
+  0%   {left: 100%;opacity:0;margin-left:-200px;}
+  100% {left: 50%;opacity:1;margin-left:-100px;}
 }
 @-o-keyframes fadefromright{
-  0%   {left: 100%;opacity:0;margin-left:-100px;}
-  100% {left: 50%;opacity:1;margin-left:-50px;}
+  0%   {left: 100%;opacity:0;margin-left:-200px;}
+  100% {left: 50%;opacity:1;margin-left:-100px;}
 }

@@ -9,8 +9,8 @@ var swipeLength = 0;
 var navboxactive = false;
 
 document.addEventListener('touchstart', touchStart, false);
-document.addEventListener('touchend',   touchEnd, false);
-
+document.addEventListener('touchmove',  touchMove, false);
+document.addEventListener('touchend',  touchEnd, false);
 function dif(a, b) { 
   return Math.abs(a - b); 
 }
@@ -18,10 +18,9 @@ function touchStart(){
   xStart = event.changedTouches[0].clientX;
   yStart = event.changedTouches[0].clientY;
   tStart = new Date();
-  console.log(tStart);
   swipeLength = document.body.clientWidth / 4;
 }
-function touchEnd(){
+function touchMove(){
   xEnd = event.changedTouches[0].clientX;
   yEnd = event.changedTouches[0].clientY;
   tEnd = new Date();
@@ -42,10 +41,12 @@ function touchEnd(){
         }else{
           navbox.setAttribute('class', '');
         }
-        navboxactive = !navboxactive;
       }
     }
   }
+}
+function touchEnd(){
+  navboxactive = !navboxactive;
   xStart = yStart = xEnd = yEnd = swipeLength = 0;
 }
 var navbox = document.createElement('a');
