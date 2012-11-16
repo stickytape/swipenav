@@ -1,8 +1,10 @@
 (function(){
 var xStart = 0;
 var yStart = 0;
+var tStart = 0;
 var xEnd = 0
 var yEnd = 0;
+var tEnd = 0;
 var swipeLength = 0;
 var navboxactive = false;
 
@@ -15,28 +17,33 @@ function dif(a, b) {
 function touchStart(){
   xStart = event.changedTouches[0].clientX;
   yStart = event.changedTouches[0].clientY;
+  tStart = new Date();
+  console.log(tStart);
   swipeLength = document.body.clientWidth / 4;
 }
 function touchEnd(){
   xEnd = event.changedTouches[0].clientX;
   yEnd = event.changedTouches[0].clientY;
-  if(dif(yStart, yEnd) <= 50){
-    if(dif(xStart, xEnd) >= swipeLength){
-      if(navboxactive === false){
-        navbox.style.opacity = 1;
-        if(xStart > xEnd){
-          navbox.setAttribute('class', 'fadefromright');
-          navbox.innerHTML = '>';
-          navbox.href = 'javascript: history.go(1);';
-        }else if(xStart < xEnd){
-          navbox.setAttribute('class', 'fadefromleft');
-          navbox.innerHTML = '<';
-          navbox.href = 'javascript: history.go(-1);';
+  tEnd = new Date();
+  if(tEnd - tStart <= 1000){
+    if(dif(yStart, yEnd) <= 50){
+      if(dif(xStart, xEnd) >= swipeLength){
+        if(navboxactive === false){
+          navbox.style.opacity = 1;
+          if(xStart > xEnd){
+            navbox.setAttribute('class', 'fadefromright');
+            navbox.innerHTML = '>';
+            navbox.href = 'javascript: history.go(1);';
+          }else if(xStart < xEnd){
+            navbox.setAttribute('class', 'fadefromleft');
+            navbox.innerHTML = '<';
+            navbox.href = 'javascript: history.go(-1);';
+          }
+        }else{
+          navbox.setAttribute('class', '');
         }
-      }else{
-        navbox.setAttribute('class', '');
+        navboxactive = !navboxactive;
       }
-      navboxactive = !navboxactive;
     }
   }
   xStart = yStart = xEnd = yEnd = swipeLength = 0;
