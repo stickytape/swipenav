@@ -1,5 +1,5 @@
 /*!
- * swipenav.css v1.0
+ * swipenav.css v1.0.1
  * https://github.com/stickytape/swipenav
  *
  * Copyright 2012 Sven Santegoeds
@@ -16,7 +16,7 @@
   font-weight:900;
   text-align:center;
   text-decoration:none;
-  position:absolute;
+  position:fixed;
   top:50%;
   margin-top:-100px;
   left:50%;
