@@ -1,3 +1,10 @@
+/*!
+ * swipenav.js v1.0
+ * https://github.com/stickytape/swipenav
+ *
+ * Copyright 2012 Sven Santegoeds
+ * Released under the MIT license
+ */
 (function(){
 var xStart = 0;
 var yStart = 0;
