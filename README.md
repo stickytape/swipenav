@@ -4,6 +4,8 @@ A standalone script written for mobile devices. The purpose of this script is to
 
 The only requirements are that you use the correct meta viewport tag, otherwise the swipenav will be activated and the page itself will scroll sideways.
 
+A demo can be found at http://beeldenmedia.nl/voorbeelden/mobiele-gebruikers-sneller-laten-navigeren/swipenav.html
+
 ## Installation
 
 Place the following meta data and the css in the head
